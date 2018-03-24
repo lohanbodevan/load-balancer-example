@@ -1,0 +1,16 @@
+version: '2'
+services:
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8080:80"
+    command: [nginx-debug, '-g', 'daemon off;']
+  node:
+    image: node:8
+    volumes:
+      - ./index.js:/src/index.js
+    command: node /src/index.js
+    ports:
+      - "3000:3000"
