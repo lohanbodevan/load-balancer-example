@@ -7,8 +7,16 @@ services:
     ports:
       - "8080:80"
     command: [nginx-debug, '-g', 'daemon off;']
-  node:
-    container_name: node-server
+  node_server1:
+    container_name: node-server-01
+    image: node:8
+    volumes:
+      - ./index.js:/src/index.js
+    command: node /src/index.js
+    ports:
+      - "3000"
+  node_server2:
+    container_name: node-server-02
     image: node:8
     volumes:
       - ./index.js:/src/index.js
