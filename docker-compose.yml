@@ -13,4 +13,4 @@ services:
       - ./index.js:/src/index.js
     command: node /src/index.js
     ports:
-      - "3000:3000"
+      - "3000"
