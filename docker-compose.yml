@@ -8,6 +8,7 @@ services:
       - "8080:80"
     command: [nginx-debug, '-g', 'daemon off;']
   node:
+    container_name: node-server
     image: node:8
     volumes:
       - ./index.js:/src/index.js
