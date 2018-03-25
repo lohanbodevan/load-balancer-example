@@ -22,8 +22,8 @@ git checkout db7e19a7a0d7fcebeacf0dda85476badc478162b
 git checkout 3ec30a232e2335ecadba481fa553fef6b973fa5d
 ``` 
 
-**PLUS**
-5. Set-up reverse proxy with caching
+## PLUS
+Set-up reverse proxy with caching
 ```bash
 git checkout cc7ff25df3ab3c0ab0064599c5f03751089cf6be
 ``` 
